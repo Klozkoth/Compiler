@@ -1,0 +1,26 @@
+0 STO #25, , my_num
+1 STO #100, , my_char
+2 STO #100, , my_bool
+3 MUL my_num, #2, total
+4 SYS #-1, my_bool, 
+5 SYS #0, , 
+6 NEG , , my_bool
+7 SYS #-1, my_bool, 
+8 SYS #0, , 
+9 MUL my_num, #10, mynum
+10 DIV my_num, #5, mynum
+11 ADD my_num, #2, mynum
+12 JNE my_bool, #100, #17
+13 SYS #-1, mynum, 
+14 SYS #-1, my_bool, 
+15 SYS #0, , 
+16 SUB my_num, #1, my_num
+17 SYS #-1, mynum, 
+18 SYS #0, , 
+19 SYS #-1, mynum, 
+20 SYS #0, , 
+21 SYS #-1, my_num, 
+22 SYS #0, , 
+23 SYS #-1, total, 
+24 SYS #0, , 
+25 HLT , , 

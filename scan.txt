@@ -1,0 +1,54 @@
+--(5)
+/* next example
+ *
+ *
+ *
+ */
+DECLARE
+	my_num	POSITIVE () := 2555;
+	my_char	CHAR := 'd' ;
+	my_bool	BOOLEAN := FALSE ;
+	mynum	SMALLINT ( );
+	total	INT (8) := 100 ;
+BEGIN
+	DBMS_OUTPUT.PUT_LINE( my_bool);
+	my_bool := NOT my_bool;
+	DBMS_OUTPUT.PUT_LINE( my_bool);
+	mynum:=my_num/2;
+	my_num := total *2;
+	WHILE total <= 1007 LOOP
+	BEGIN
+		DBMS_OUTPUT.NEW_LINE;
+		WHILE my_num >= 250 LOOP
+			BEGIN
+				DBMS_OUTPUT.PUT_LINE( my_num);
+				DBMS_OUTPUT.PUT_LINE( my_bool);
+				DBMS_OUTPUT.NEW_LINE;
+				my_num := my_num- 1
+			END;
+		END LOOP;
+		
+		IF my_bool = TRUE THEN
+			BEGIN
+				DBMS_OUTPUT.PUT_LINE( my_char);
+				& my_num;
+				DBMS_OUTPUT.PUT_LINE( my_num);
+				my_num := NOT my_num;
+				DBMS_OUTPUT.PUT_LINE( my_num);
+				my_bool := FALSE;
+				DBMS_OUTPUT.PUT_LINE( my_char)
+			END;
+		END IF;
+		mynum := 10;
+		DBMS_OUTPUT.PUT_LINE( mynum);
+		DBMS_OUTPUT.PUT_LINE( my_bool);
+		total := total + 1;
+		DBMS_OUTPUT.NEW_LINE
+		END;
+	END LOOP;
+	DBMS_OUTPUT.PUT_LINE( mynum);
+	DBMS_OUTPUT.PUT_LINE( my_char);
+	DBMS_OUTPUT.PUT_LINE( my_num);
+	DBMS_OUTPUT.PUT_LINE( total)
+END ;
+$
